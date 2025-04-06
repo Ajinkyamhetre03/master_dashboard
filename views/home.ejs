@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">IoT Control Center</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Welcome <%= name %>
+                        </h1>
+                        <p class="card-text">Select a dashboard to monitor and control your IoT devices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- RTLS Dashboard -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">RTLS</h5>
+                        <p class="card-text">Real-Time Location System monitoring and tracking.</p>
+                        <a href="/dashboard/rtls" class="btn btn-primary">Open Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soil Moisture Dashboard -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Soil Moisture</h5>
+                        <p class="card-text">Monitor soil moisture levels for optimal plant growth.</p>
+                        <a href="/dashboard/soil-moisture" class="btn btn-primary">Open Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MQ2 Gas Sensor Dashboard -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">MQ2 Gas Sensor</h5>
+                        <p class="card-text">Monitor gas levels and detect potential hazards.</p>
+                        <a href="/dashboard/mq2" class="btn btn-primary">Open Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DTH Sensor Dashboard -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">DHT Sensor</h5>
+                        <p class="card-text">Temperature and humidity monitoring system.</p>
+                        <a href="/dashboard/dht" class="btn btn-primary">Open Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PIR Motion Sensor Dashboard -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">PIR Motion</h5>
+                        <p class="card-text">Motion detection and security monitoring.</p>
+                        <a href="/dashboard/pir" class="btn btn-primary">Open Dashboard</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Automation Dashboard -->
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Home Automation</h5>
+                        <p class="card-text">Control lights, appliances, and other home devices.</p>
+                        <a href="/dashboard/home-automation" class="btn btn-primary">Open Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; <%= new Date().getFullYear() %> IoT Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
